@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Launch Checklist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div>
+        <h1>Team Launch Checklist</h1>
+        <p class="subtitle">Track planning, content, approvals, and launch day in one place.</p>
+      </div>
+      <button id="resetButton" type="button" class="ghost-button">Reset checklist</button>
+    </header>
+
+    <section class="progress" aria-live="polite">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      <p id="progressLabel" class="meta progress-label"></p>
+    </section>
+
+    <div class="filters">
+      <div class="filter">
+        <label for="statusFilter">Show</label>
+        <select id="statusFilter">
+          <option value="all">All tasks</option>
+          <option value="open">Open only</option>
+          <option value="done">Completed only</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="sections" class="sections"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
