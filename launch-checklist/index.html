@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Launch Checklist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div>
+        <h1>Team Launch Checklist</h1>
+        <p class="subtitle">Track every step from planning to launch day. Progress is saved in this browser.</p>
+      </div>
+      <button id="resetButton" class="secondary" type="button">Reset checklist</button>
+    </header>
+
+    <section class="overall" aria-label="Overall progress">
+      <div class="overall-label">
+        <span>Overall progress</span>
+        <span id="overallText">0 / 0</span>
+      </div>
+      <div class="bar"><div id="overallBar" class="bar-fill"></div></div>
+    </section>
+
+    <div id="sections" class="sections"></div>
+  </main>
+
+  <template id="sectionTemplate">
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title"></h2>
+        <span class="section-count"></span>
+      </div>
+      <div class="bar small"><div class="bar-fill"></div></div>
+      <ul class="items"></ul>
+      <form class="add-form">
+        <input class="add-input" type="text" placeholder="Add a task" aria-label="Add a task" required>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
