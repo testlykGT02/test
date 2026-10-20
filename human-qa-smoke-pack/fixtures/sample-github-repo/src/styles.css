@@ -25,6 +25,12 @@ label {
   font-weight: 600;
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 select {
   padding: 8px 12px;
   border: 1px solid #cbd5e1;
@@ -48,4 +54,9 @@ select {
 .meta {
   color: #64748b;
   font-size: 0.9rem;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  color: #64748b;
 }
