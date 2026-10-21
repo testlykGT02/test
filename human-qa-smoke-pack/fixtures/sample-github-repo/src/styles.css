@@ -49,3 +49,8 @@ select {
   color: #64748b;
   font-size: 0.9rem;
 }
+
+.empty {
+  grid-column: 1 / -1;
+  color: #64748b;
+}
