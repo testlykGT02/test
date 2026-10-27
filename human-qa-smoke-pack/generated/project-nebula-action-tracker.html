@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Nebula · Action Tracker</title>
+<style>
+:root{--ink:#172033;--muted:#68758b;--line:#dfe4ec;--paper:#fff;--bg:#f4f6fa;--navy:#15213b;--red:#b42318;--redbg:#feeeee;--amber:#9a6700;--amberbg:#fff4ce;--blue:#3157a5;--bluebg:#edf3ff;--green:#18794e;--greenbg:#e9f8f0}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.shell{max-width:1200px;margin:auto;padding:32px 24px 54px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#61708d;font-weight:850}.top h1{font-size:34px;line-height:1.12;letter-spacing:-.035em;margin:7px 0 5px}.sub{color:var(--muted);margin:0}.approval{padding:15px 18px;min-width:260px;border-radius:14px;background:#fff9e8;border:1px solid #eed88d}.approval small{display:block;color:#775700;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.approval b{font-size:18px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 18px}.stat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px 17px}.stat b{font-size:25px;display:block;line-height:1.1}.stat span{color:var(--muted);font-weight:650}.stat.red{border-top:4px solid var(--red)}.stat.blue{border-top:4px solid var(--blue)}.stat.amber{border-top:4px solid #e3a008}.blocked-callout{background:linear-gradient(145deg,#fff,#fff5f4);border:1px solid #efc4c0;border-radius:15px;padding:18px 20px;margin-bottom:18px}.blocked-callout h2{font-size:17px;color:var(--red);margin:0 0 10px}.blocked-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.block{background:#fff;border:1px solid #f1d3d0;border-left:4px solid var(--red);border-radius:10px;padding:11px 13px}.block b{display:block}.block p{margin:3px 0 0;color:#59667b;font-size:13px}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 2px 10px #1a274312;margin-bottom:18px}.card-head{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-bottom:14px}.card h2{font-size:18px;margin:0}.card-head span{font-size:12px;color:var(--muted)}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:940px}th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.09em;padding:9px 10px;border-bottom:1px solid var(--line)}td{padding:14px 10px;border-bottom:1px solid #edf0f4;vertical-align:middle}tr:last-child td{border-bottom:0}.item{font-weight:750}.owner{white-space:nowrap}.muted{color:var(--muted)}.source{display:inline-flex;align-items:center;padding:4px 8px;border-radius:6px;background:#f1f4f8;font-size:11px;font-weight:750;white-space:nowrap}.source.mail{background:#f0edff;color:#5c3aa6}.source.meet{background:var(--bluebg);color:var(--blue)}.source.doc{background:#eef7f3;color:var(--green)}.status{display:inline-flex;padding:5px 9px;border-radius:99px;font-size:11px;font-weight:800;white-space:nowrap}.blocked{color:var(--red);background:var(--redbg)}.progress{color:var(--amber);background:var(--amberbg)}.notstarted,.open{color:var(--blue);background:var(--bluebg)}.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.context h3{font-size:13px;margin:0 0 8px}.context p,.context ul{color:#536076;margin:0}.context ul{padding-left:18px}.path{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;background:#f1f4f8;padding:2px 5px;border-radius:5px;overflow-wrap:anywhere}.notice{margin-top:14px;padding:12px 14px;border-radius:10px;background:#f7f9fc;color:#536076;font-size:12px;border:1px solid #e5e9f0}.notice strong{color:var(--ink)}.insight-link{display:inline-flex;align-items:center;gap:7px;margin-top:12px;padding:8px 12px;border-radius:9px;background:var(--navy);color:#fff;text-decoration:none;font-size:12px;font-weight:800}.insight-link:hover{text-decoration:underline}@media(max-width:820px){.top{display:block}.approval{margin-top:15px}.stats{grid-template-columns:1fr 1fr}.blocked-grid,.context-grid{grid-template-columns:1fr}}@media(max-width:480px){.shell{padding:22px 14px 40px}.top h1{font-size:29px}}
+</style>
+</head>
+<body><main class="shell">
+  <header class="top">
+    <div><div class="eyebrow">Launch readiness operations</div><h1>Project Nebula action tracker</h1><p class="sub">Consolidated from the launch-approval email fixture, QA sync meeting fixture, and approval document.</p></div>
+    <div class="approval"><small>Approval state</small><b>Conditionally approved</b></div>
+  </header>
+
+  <section class="stats" aria-label="Tracker summary">
+    <div class="stat"><b>8</b><span>Total actions</span></div><div class="stat red"><b>2</b><span>Blocked</span></div><div class="stat amber"><b>1</b><span>In progress</span></div><div class="stat blue"><b>5</b><span>Open / not started</span></div>
+  </section>
+
+  <section class="blocked-callout">
+    <h2>⛔ Blocked items need attention</h2>
+    <div class="blocked-grid">
+      <article class="block"><b>Accessibility review · Maya Johnson · July 18</b><p>Blocked until the color contrast audit is complete.</p></article>
+      <article class="block"><b>Executive sign-off · Jordan Blake · July 21</b><p>Blocked until final product copy is approved.</p></article>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><h2>Action items</h2><span>Approval work + expected meeting outputs</span></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Action item</th><th>Owner</th><th>Due date</th><th>Source</th><th>Status</th><th>Notes / dependency</th></tr></thead>
+      <tbody>
+        <tr><td class="item">Accessibility review</td><td class="owner">Maya Johnson</td><td>July 18</td><td><span class="source mail">Email + approval doc</span></td><td><span class="status blocked">Blocked</span></td><td>Waiting for color contrast audit</td></tr>
+        <tr><td class="item">Final product copy</td><td class="owner">Elena Volkov</td><td>July 19</td><td><span class="source mail">Email + approval doc</span></td><td><span class="status progress">In progress</span></td><td>Approval unblocks executive sign-off</td></tr>
+        <tr><td class="item">Launch metrics dashboard</td><td class="owner">Liam Chen</td><td>July 20</td><td><span class="source mail">Email + approval doc</span></td><td><span class="status notstarted">Not started</span></td><td>Owner confirmed in email</td></tr>
+        <tr><td class="item">Executive sign-off</td><td class="owner">Jordan Blake</td><td>July 21</td><td><span class="source mail">Email + approval doc</span></td><td><span class="status blocked">Blocked</span></td><td>Waiting for final product copy approval</td></tr>
+        <tr><td class="item">Confirm accessibility review status</td><td class="muted">Meeting attendees</td><td class="muted">At QA sync</td><td><span class="source meet">QA sync meeting</span></td><td><span class="status open">Open</span></td><td>Expected meeting output</td></tr>
+        <tr><td class="item">Confirm final product copy status</td><td class="muted">Meeting attendees</td><td class="muted">At QA sync</td><td><span class="source meet">QA sync meeting</span></td><td><span class="status open">Open</span></td><td>Expected meeting output</td></tr>
+        <tr><td class="item">Confirm executive sign-off path</td><td class="muted">Meeting attendees</td><td class="muted">At QA sync</td><td><span class="source meet">QA sync meeting</span></td><td><span class="status open">Open</span></td><td>Expected meeting output</td></tr>
+        <tr><td class="item">Confirm launch metrics dashboard owner</td><td class="muted">Meeting attendees</td><td class="muted">At QA sync</td><td><span class="source meet">QA sync meeting</span></td><td><span class="status open">Open</span></td><td>Email identifies Liam Chen</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="card context">
+    <div class="card-head"><h2>Source & context</h2><span>Traceability</span></div>
+    <div class="context-grid">
+      <div><h3>Email fixture</h3><p><strong>Subject:</strong> Project Nebula launch approval - blockers and owners</p><p><strong>Found in:</strong> <span class="path">human-qa-smoke-pack/fixtures/m365-fixtures/M365-FIXTURE-SETUP.md</span></p></div>
+      <div><h3>Calendar fixture</h3><p><strong>Title:</strong> Code Tab QA sync - Project Nebula</p><p><strong>Time/location:</strong> Any upcoming weekday, 30 minutes · Teams</p><p><strong>Found in:</strong> the same fixture setup file</p></div>
+      <div><h3>Status source</h3><p><span class="path">human-qa-smoke-pack/fixtures/m365-fixtures/Project-Nebula-Launch-Approval.md</span> provides explicit statuses and blocker details.</p></div>
+      <div><h3>Meeting purpose</h3><p>Review launch readiness, grounding quality, QA smoke results, and open blockers; confirm the four listed outputs.</p></div>
+    </div>
+    <div class="notice"><strong>Grounding note:</strong> The available repository contains synthetic setup fixtures rather than a connected mailbox or calendar export. The event template has no exact date or named attendees, so meeting-derived actions use “At QA sync” and “Meeting attendees” rather than invented values.</div>
+    <a class="insight-link" href="project-nebula-insights.md">Read the launch insights →</a>
+  </section>
+</main></body></html>
