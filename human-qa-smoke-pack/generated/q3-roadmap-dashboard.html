@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Q3 Roadmap · Launch Readiness</title>
+<style>
+:root{--ink:#172033;--muted:#647087;--line:#dfe4ec;--paper:#fff;--bg:#f4f6fa;--green:#18794e;--green-bg:#e9f8f0;--amber:#9a6700;--amber-bg:#fff4ce;--red:#b42318;--red-bg:#feeeee;--blue:#3157a5;--blue-bg:#edf3ff;--navy:#14213d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.shell{max-width:1180px;margin:auto;padding:32px 24px 56px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#60708f}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:22px}.top h1{font-size:34px;line-height:1.12;margin:7px 0 5px;letter-spacing:-.035em}.sub{color:var(--muted);margin:0}.readiness{min-width:235px;padding:18px 20px;border:1px solid #efd58a;background:linear-gradient(145deg,#fff9e8,var(--amber-bg));border-radius:16px}.readiness small{display:block;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:#795600}.readiness strong{display:flex;align-items:center;gap:9px;font-size:25px;margin-top:4px}.dot{width:13px;height:13px;border-radius:50%;background:#f4b400;box-shadow:0 0 0 5px #f4b40022}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 24px}.metric{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px}.metric b{display:block;font-size:27px;line-height:1.1}.metric span{color:var(--muted);font-weight:650}.metric.green{border-top:4px solid var(--green)}.metric.amber{border-top:4px solid #e3a008}.metric.red{border-top:4px solid var(--red)}.grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(320px,.85fr);gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 2px 10px #1a274312}.card h2{font-size:18px;margin:0}.card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.card-head span{color:var(--muted);font-size:12px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:650px}th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--line);padding:10px 9px}td{padding:15px 9px;border-bottom:1px solid #edf0f4;vertical-align:middle}tr:last-child td{border-bottom:0}.milestone{font-weight:750}.owner{display:flex;gap:9px;align-items:center;white-space:nowrap}.avatar{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:var(--blue-bg);color:var(--blue);font-size:11px;font-weight:850}.status{display:inline-flex;align-items:center;white-space:nowrap;padding:5px 9px;border-radius:99px;font-size:12px;font-weight:780}.on{color:var(--green);background:var(--green-bg)}.risk{color:var(--amber);background:var(--amber-bg)}.blocked{color:var(--red);background:var(--red-bg)}.risk-list{display:grid;gap:11px}.risk-item{padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#fbfcfe}.risk-item header{display:flex;justify-content:space-between;gap:10px;margin-bottom:5px}.risk-item b{font-size:13px}.risk-item p{margin:0;color:#4f5d73;font-size:13px}.tag{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.tag.amber{color:var(--amber)}.tag.red{color:var(--red)}.tag.blue{color:var(--blue)}.priority{margin-top:18px;background:var(--navy);color:#fff}.priority h2{color:#fff}.priority p{color:#cbd5e7;margin:8px 0 0}.priority strong{color:#fff}.source{grid-column:1/-1;margin-top:0}.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.kv{display:grid;grid-template-columns:110px 1fr;gap:8px 12px;margin:0}.kv dt{color:var(--muted);font-weight:700}.kv dd{margin:0;overflow-wrap:anywhere}.context{border-left:3px solid #8aa4d6;padding-left:16px;color:#4f5d73}.context p{margin:0 0 8px}.context p:last-child{margin:0}.source code{background:#f1f4f8;padding:2px 5px;border-radius:5px;font-size:12px}.note{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}@media(max-width:850px){.top{display:block}.readiness{margin-top:16px}.summary{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.source{grid-column:auto}.source-grid{grid-template-columns:1fr}}@media(max-width:480px){.shell{padding:22px 14px 42px}.summary{grid-template-columns:1fr 1fr}.top h1{font-size:29px}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <div class="top">
+    <div><div class="eyebrow">Q3 delivery overview</div><h1>Launch readiness dashboard</h1><p class="sub">Milestones, accountable owners, dependencies, and current readiness signals.</p></div>
+    <section class="readiness" aria-label="Overall launch readiness"><small>Overall status</small><strong><span class="dot"></span>Yellow</strong></section>
+  </div>
+
+  <section class="summary" aria-label="Roadmap summary">
+    <div class="metric"><b>4</b><span>Total milestones</span></div>
+    <div class="metric green"><b>2</b><span>On track</span></div>
+    <div class="metric amber"><b>1</b><span>At risk</span></div>
+    <div class="metric red"><b>1</b><span>Blocked</span></div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <div class="card-head"><h2>Milestones & owners</h2><span>July 12–21</span></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Milestone</th><th>Owner</th><th>Target</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="milestone">Prototype canvas polish</td><td><div class="owner"><span class="avatar">MJ</span>Maya Johnson</div></td><td>July 12</td><td><span class="status on">On track</span></td></tr>
+          <tr><td class="milestone">M365 grounding smoke pass</td><td><div class="owner"><span class="avatar">EV</span>Elena Volkov</div></td><td>July 15</td><td><span class="status risk">At risk</span></td></tr>
+          <tr><td class="milestone">GitHub export validation</td><td><div class="owner"><span class="avatar">JB</span>Jordan Blake</div></td><td>July 18</td><td><span class="status on">On track</span></td></tr>
+          <tr><td class="milestone">Dogfood readiness review</td><td><div class="owner"><span class="avatar">LC</span>Liam Chen</div></td><td>July 21</td><td><span class="status blocked">Blocked</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><h2>Open risks</h2><span>3 items</span></div>
+      <div class="risk-list">
+        <article class="risk-item"><header><b>M365 fixture readiness</b><span class="tag amber">At risk</span></header><p>Tenant fixture data is still being prepared for the grounding smoke pass.</p></article>
+        <article class="risk-item"><header><b>Dogfood evidence gap</b><span class="tag red">Blocker</span></header><p>QA smoke-pack results are required from at least three testers before review.</p></article>
+        <article class="risk-item"><header><b>Test repository availability</b><span class="tag blue">Dependency</span></header><p>GitHub export validation depends on disposable test repositories being available for QA.</p></article>
+      </div>
+    </section>
+
+    <section class="card priority">
+      <h2>Readiness focus</h2>
+      <p>Prioritize <strong>M365 grounding</strong> and <strong>GitHub export validation</strong> before expanding scenario coverage.</p>
+    </section>
+
+    <section class="card source">
+      <div class="card-head"><h2>Source & context</h2><span>Traceability</span></div>
+      <div class="source-grid">
+        <dl class="kv">
+          <dt>Source file</dt><dd><code>human-qa-smoke-pack/fixtures/m365-fixtures/Q3-Roadmap.md</code></dd>
+          <dt>Sections used</dt><dd>Milestones, Risks, Launch readiness</dd>
+          <dt>Source type</dt><dd>Markdown fixture in the active work repository</dd>
+          <dt>Intended path</dt><dd><code>Documents/CodeTabQA/Q3-Roadmap.md</code></dd>
+        </dl>
+        <div class="context">
+          <p><strong>Fixture context:</strong> The companion setup file identifies this as non-sensitive synthetic content for a QA account or dedicated Code Tab evaluation tenant.</p>
+          <p><strong>Data handling:</strong> Milestones, owners, targets, statuses, risk statements, and the Yellow readiness status come directly from the roadmap. Risk labels and short headings are dashboard presentation aids.</p>
+        </div>
+      </div>
+      <div class="note">Dates are shown exactly as written in the source; the roadmap does not specify a year or an “as of” timestamp.</div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
