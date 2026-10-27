@@ -7,22 +7,41 @@ const requests = [
 ];
 
 const priorityFilter = document.querySelector("#priorityFilter");
+const statusFilter = document.querySelector("#statusFilter");
 const cards = document.querySelector("#cards");
+const filters = {
+  priority: priorityFilter.value,
+  status: statusFilter.value,
+};
 
 function render() {
-  const priority = priorityFilter.value;
-  const visible = requests.filter((item) => priority === "all" || item.priority === priority);
+  const visible = requests.filter((item) => {
+    const matchesPriority = filters.priority === "all" || item.priority === filters.priority;
+    const matchesStatus = filters.status === "all" || item.status === filters.status;
+    return matchesPriority && matchesStatus;
+  });
 
-  cards.innerHTML = visible.map((item) => `
-    <article class="card">
-      <h2>${item.id}</h2>
-      <p>${item.title}</p>
-      <p class="meta">Priority: ${item.priority}</p>
-      <p class="meta">Status: ${item.status}</p>
-      <p class="meta">Owner: ${item.owner}</p>
-    </article>
-  `).join("");
+  cards.innerHTML = visible.length
+    ? visible.map((item) => `
+      <article class="card">
+        <h2>${item.id}</h2>
+        <p>${item.title}</p>
+        <p class="meta">Priority: ${item.priority}</p>
+        <p class="meta">Status: ${item.status}</p>
+        <p class="meta">Owner: ${item.owner}</p>
+      </article>
+    `).join("")
+    : '<p class="empty-state">No feature requests match the selected filters.</p>';
 }
 
-priorityFilter.addEventListener("change", render);
+priorityFilter.addEventListener("change", (event) => {
+  filters.priority = event.target.value;
+  render();
+});
+
+statusFilter.addEventListener("change", (event) => {
+  filters.status = event.target.value;
+  render();
+});
+
 render();
