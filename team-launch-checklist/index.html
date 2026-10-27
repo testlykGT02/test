@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Launch Checklist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Team workspace</p>
+        <h1>Launch checklist</h1>
+        <p class="intro">Keep the whole team aligned from kickoff through launch day.</p>
+      </div>
+      <button id="resetButton" class="reset-button" type="button">Reset checklist</button>
+    </header>
+
+    <section class="progress-panel" aria-labelledby="progressTitle">
+      <div class="progress-copy">
+        <h2 id="progressTitle">Launch progress</h2>
+        <p id="progressText">0 of 16 tasks complete</p>
+      </div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0" aria-labelledby="progressTitle" aria-describedby="progressText">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </section>
+
+    <div class="checklist-grid">
+      <section class="checklist-section" aria-labelledby="planningTitle">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div>
+            <h2 id="planningTitle">Planning</h2>
+            <p>Set the direction and owners.</p>
+          </div>
+        </div>
+        <ul class="task-list">
+          <li><label><input type="checkbox" data-task-id="planning-goals"><span>Define launch goals and success metrics</span></label></li>
+          <li><label><input type="checkbox" data-task-id="planning-audience"><span>Confirm target audience and key message</span></label></li>
+          <li><label><input type="checkbox" data-task-id="planning-timeline"><span>Share timeline and milestone dates</span></label></li>
+          <li><label><input type="checkbox" data-task-id="planning-owners"><span>Assign owners for every workstream</span></label></li>
+        </ul>
+      </section>
+
+      <section class="checklist-section" aria-labelledby="contentTitle">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <div>
+            <h2 id="contentTitle">Content</h2>
+            <p>Prepare every customer-facing asset.</p>
+          </div>
+        </div>
+        <ul class="task-list">
+          <li><label><input type="checkbox" data-task-id="content-copy"><span>Finalize launch copy and messaging</span></label></li>
+          <li><label><input type="checkbox" data-task-id="content-creative"><span>Complete creative assets and graphics</span></label></li>
+          <li><label><input type="checkbox" data-task-id="content-channels"><span>Schedule email, social, and web updates</span></label></li>
+          <li><label><input type="checkbox" data-task-id="content-qa"><span>Proofread links, dates, and calls to action</span></label></li>
+        </ul>
+      </section>
+
+      <section class="checklist-section" aria-labelledby="approvalsTitle">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <div>
+            <h2 id="approvalsTitle">Approvals</h2>
+            <p>Collect sign-off before go-live.</p>
+          </div>
+        </div>
+        <ul class="task-list">
+          <li><label><input type="checkbox" data-task-id="approvals-brand"><span>Receive brand and creative approval</span></label></li>
+          <li><label><input type="checkbox" data-task-id="approvals-legal"><span>Complete legal and compliance review</span></label></li>
+          <li><label><input type="checkbox" data-task-id="approvals-leadership"><span>Confirm leadership sign-off</span></label></li>
+          <li><label><input type="checkbox" data-task-id="approvals-ready"><span>Record final go / no-go decision</span></label></li>
+        </ul>
+      </section>
+
+      <section class="checklist-section" aria-labelledby="launchTitle">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <div>
+            <h2 id="launchTitle">Launch day</h2>
+            <p>Publish, monitor, and communicate.</p>
+          </div>
+        </div>
+        <ul class="task-list">
+          <li><label><input type="checkbox" data-task-id="launch-publish"><span>Publish all scheduled assets</span></label></li>
+          <li><label><input type="checkbox" data-task-id="launch-check"><span>Run a live experience smoke test</span></label></li>
+          <li><label><input type="checkbox" data-task-id="launch-monitor"><span>Monitor feedback and key metrics</span></label></li>
+          <li><label><input type="checkbox" data-task-id="launch-update"><span>Send launch update to the team</span></label></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
